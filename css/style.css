@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
 /*! HTML5 Boilerplate v9.0.0-RC1 | MIT License | https://html5boilerplate.com/ */
 
 /* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
@@ -160,6 +162,80 @@ textarea {
 .clearfix::after {
   clear: both;
 }
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #46495C;
+  width: 100%;
+  height: 100%;
+}
+
+.feedback-form-block {
+  background-color: #FFFFFF;
+  position: absolute;
+  width: 728px;
+  height: 600px;
+  padding: 64px 124px 64px 124px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 24px;
+}
+
+h1 {
+  font-family: Open Sans;
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 43.58px;
+  color: #46495C;
+}
+
+.input-block {
+  width: 100%;
+}
+
+label {
+  display: block;
+  font-family: Open Sans;
+  color: #001C3D;
+  opacity: 56%;
+  width: 33px;
+  height: 24px;
+  margin-bottom: 4px;
+}
+
+input {
+  width: 100%;
+  height: 64px;
+  border-radius: 8px;
+  border: 1px solid #C9CCDD;
+  margin: 0;
+}
+
+button {
+  font-family: Open Sans;
+  color: #FFFFFF;
+  background-color: #FF5721;
+  width: 100%;
+  height: 72px;
+  box-sizing: border-box;
+  border-radius: 14px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  cursor: pointer;
+}
+
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
