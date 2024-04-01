@@ -3,9 +3,6 @@ body {
 }
 
 .background {
-  position: fixed;
-  top: 0;
-  left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,12 +12,11 @@ body {
 
 .form {
   background-color: #FFFFFF;
-  position: absolute;
   width: 100%;
   max-width: 728px;
   height: auto;
   min-height: 600px;
-  padding: 64px 124px 64px 124px;
+  padding: 64px 124px;
   border-radius: 18px;
   display: flex;
   flex-direction: column;
@@ -41,11 +37,11 @@ h1 {
 
 .form__input-wrap {
   width: 100%;
+  font-family: Gotham Pro;
 }
 
 label {
   display: block;
-  font-family: Gotham Pro;
   font-size: 16px;
   line-height: 24px;
   text-align: left;
@@ -59,12 +55,26 @@ input {
   border-radius: 8px;
   border: 1px solid #C9CCDD;
   margin: 0;
+  color: #222222;
+  font-size: 18px;
+  padding: 5px 15px;
+  box-sizing: border-box;
+}
+
+input:hover {
+  background-color: whitesmoke;
+  border-width: 2px;
+  transition: background-color 1.5s ease-in-out;
+}
+
+input:focus {
+  background-color: whitesmoke;
 }
 
 button {
   font-family: Gotham Pro;
   color: #FFFFFF;
-  background-color: #FF5721;
+  background-color: rgba(255, 87, 33, 100%);
   width: 100%;
   height: 72px;
   box-sizing: border-box;
@@ -74,4 +84,24 @@ button {
   line-height: 26px;
   text-align: center;
   cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(142, 48, 18, 100%);
+}
+
+button:active {
+  background-color: rgba(178, 60, 23, 100%);
+}
+
+@media (min-width: 640px) {
+  .form {
+    padding: 64px 32px;
+  }
+}
+
+@media (min-width: 375px) {
+  .form {
+    padding: 64px 24px;
+  }
 }
