@@ -53,18 +53,20 @@ input {
   width: 100%;
   height: 64px;
   border-radius: 8px;
-  border: 1px solid #C9CCDD;
+  border: none;
   margin: 0;
   color: #222222;
   font-size: 18px;
   padding: 5px 15px;
   box-sizing: border-box;
+  background-color: transparent;
+  box-shadow: 0 0 0 1px #C9CCDD;
+  transition: all ease .28s;
 }
 
 input:hover {
   background-color: whitesmoke;
-  border-width: 2px;
-  transition: background-color 1.5s ease-in-out;
+  box-shadow: 0 0 0 2px #C9CCDD;
 }
 
 input:focus {
@@ -84,6 +86,7 @@ button {
   line-height: 26px;
   text-align: center;
   cursor: pointer;
+  transition: background-color ease .28s;
 }
 
 button:hover {
@@ -94,14 +97,15 @@ button:active {
   background-color: rgba(178, 60, 23, 100%);
 }
 
-@media (min-width: 640px) {
+@media screen and (max-width: 640px) {
   .form {
     padding: 64px 32px;
   }
 }
 
-@media (min-width: 375px) {
+@media screen and (max-width: 375px) {
   .form {
     padding: 64px 24px;
   }
 }
+
