@@ -1,32 +1,10 @@
 @import "global.css";
 @import "normalize.css";
 @import "form.css";
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
 @font-face {
-font-family: "Gotham Pro";
-src: url("../fonts/gothampro.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Gotham Pro";
-  src: url("../fonts/gothampro_bold.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Gotham Pro";
-  src: url("../fonts/gothampro_light.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Gotham Pro";
-  src: url("../fonts/gothampro_medium.ttf") format("truetype");
+font-family: "Montserrat Alternates";
+src: url("../fonts/MontserratAlternates-Regular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }

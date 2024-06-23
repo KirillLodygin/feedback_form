@@ -12,96 +12,102 @@ body {
 
 .form {
   background-color: #FFFFFF;
-  width: 100%;
-  max-width: 728px;
-  height: auto;
-  min-height: 600px;
-  padding: 64px 124px;
-  border-radius: 18px;
+  width: 288px;
+  height: 384px;
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 16px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
-  gap: 24px;
+  gap: 16px;
 }
 
-h1 {
-  font-family: Open Sans;
-  width: 100%;
-  text-align: center;
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 40px;
-  color: #46495C;
+.form__game-field {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 256px;
+  height: auto;
+  padding: 0;
 }
 
-.form__input-wrap {
-  width: 100%;
-  font-family: Gotham Pro;
-}
-
-label {
-  display: block;
-  font-size: 16px;
-  line-height: 24px;
-  text-align: left;
-  color: rgba(0,28,61, 56%);
-  margin-bottom: 4px;
-}
-
-input {
-  width: 100%;
-  height: 64px;
-  border-radius: 8px;
-  border: 1px solid #C9CCDD;
-  margin: 0;
-  color: #222222;
-  font-size: 18px;
-  padding: 5px 15px;
+.cell {
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  background-color: #F6F6F6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
-}
-
-input:hover {
-  background-color: whitesmoke;
-  border-width: 2px;
-  transition: background-color 1.5s ease-in-out;
-}
-
-input:focus {
-  background-color: whitesmoke;
-}
-
-button {
-  font-family: Gotham Pro;
-  color: #FFFFFF;
-  background-color: rgba(255, 87, 33, 100%);
-  width: 100%;
-  height: 72px;
-  box-sizing: border-box;
-  border-radius: 14px;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 26px;
-  text-align: center;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: rgba(142, 48, 18, 100%);
+.cell:hover {
+  border: 2px solid #00000014;
+  background-color: #FFFFFF;
 }
 
-button:active {
-  background-color: rgba(178, 60, 23, 100%);
+.filled-cell {
+  background-color: #FFFFFF;
+  border: 2px solid #00000014;
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 }
 
-@media (min-width: 640px) {
-  .form {
-    padding: 64px 32px;
-  }
+.winning-cell {
+  background-color: #FFFFFF;
+  border: 2px solid #FFD900;
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 }
 
-@media (min-width: 375px) {
-  .form {
-    padding: 64px 24px;
-  }
+.form__game-button {
+  font-family: "Montserrat Alternates", serif;
+  width: 256px;
+  height: 80px;
+  gap: 0;
+  border-radius: 16px;
+  border: 2px solid #000000;
+  color: #000000;
+  background-color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.form__game-button:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.form__game-button:active {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.form__reset-button {
+  font-family: "Montserrat Alternates", serif;
+  width: 256px;
+  height: 80px;
+  gap: 0;
+  border-radius: 16px;
+  border: 2px solid #000000;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 400;
 }
