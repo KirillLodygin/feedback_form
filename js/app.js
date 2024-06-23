@@ -45,21 +45,25 @@ const startGame = () =>  {
   gameOver = false
 }
 
+const allEqual = arr => arr.every(v => v === arr[0])
+const isEven = number => number % 2 === 0
+
 const markWiningCells = (winningCells) => {
+  gameButton.className = 'form__reset-button'
   winningCells.forEach(i => {
     const winningCell = document.getElementById(`gameCell_${i}`)
     winningCell.className = 'winning-cell'
   })
+  setTimeout(() => window.alert(isEven(processCounter) ? 'Победили нолики' : 'Победили крестики'))
 }
-
-const allEqual = arr => arr.every(v => v === arr[0])
 
 const inspectGameSituation = () => {
   for (const key in controlObject) {
-    let winingLine = []
+    let winingLine
     for (let i = 0; i < controlObject[key].length; i++) {
+      winingLine = []
       controlObject[key][i].forEach(item => winingLine.push(controlGameField[item]))
-      gameOver = allEqual(winingLine)
+      gameOver = winingLine[0] ? allEqual(winingLine) : false
       if (gameOver) {
         winingLine = controlObject[key][i]
         break
@@ -71,8 +75,6 @@ const inspectGameSituation = () => {
     }
   }
 }
-
-const isEven = number => number % 2 === 0
 
 const makeMove = currentCellId => {
   processCounter += 1
@@ -103,6 +105,7 @@ const resetGameField = () => {
   }
   processCounter = 0
   gameOver = false
+  gameButton.className = 'form__game-button'
 }
 
 startGame()
